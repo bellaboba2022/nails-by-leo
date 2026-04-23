@@ -90,6 +90,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-gutter: stable;
 }
 
 h1, h2, h3 {
@@ -320,11 +321,12 @@ a:hover {
   transform: translate(-50%, -50%);
   font-family: var(--font-script);
   font-size: 600px;
-  color: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.08);
   font-weight: 400;
   line-height: 1;
   pointer-events: none;
   z-index: 0;
+  will-change: transform;
 }
 
 /* =========================================================
@@ -816,7 +818,7 @@ section.dark {
   }
 
   .decorative-l {
-    font-size: 280px;
+    font-size: 450px;
   }
 
   .gallery-page h1,
