@@ -163,8 +163,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <span class="logo-script">L</span>
-                <span class="logo-text">NAILS BY <span class="logo-accent">LEO</span></span>
+                <a href="index.html">
+                    <span class="logo-script">L</span>
+                    <span class="logo-text">NAILS BY <span class="logo-accent">LEO</span></span>
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="services.html">SERVICES</a></li>
@@ -178,18 +180,8 @@
     <!-- Main Content -->
     <div class="gallery-page">
         <div class="gallery-header">
-            <h1>Gallery</h1>
-            <p>Explore our latest nail designs and creative work. Each design tells a story of artistry, passion, and personalization.</p>
-        </div>
-
-        <div class="filter-section">
-            <div class="filter-buttons">
-                <button class="filter-btn active" onclick="filterGallery('all')">All</button>
-                <button class="filter-btn" onclick="filterGallery('gel')">Gel</button>
-                <button class="filter-btn" onclick="filterGallery('acrylic')">Acrylic</button>
-                <button class="filter-btn" onclick="filterGallery('art')">Custom Art</button>
-                <button class="filter-btn" onclick="filterGallery('chrome')">Chrome</button>
-            </div>
+            <h1 style="color: var(--white);">Gallery</h1>
+            <p style="color: var(--gray-100);">Explore our latest nail designs and creative work. Each design tells a story of artistry, passion, and personalization.</p>
         </div>
 
         <div class="gallery-grid">
@@ -250,33 +242,6 @@
                 </div>
             </div>
 
-            <div class="gallery-item" data-category="gel">
-                <div class="gallery-placeholder">
-                    <span>✨</span>
-                    <span style="font-size: 14px;">Gel Design 3</span>
-                </div>
-            </div>
-
-            <div class="gallery-item" data-category="acrylic">
-                <div class="gallery-placeholder">
-                    <span>💅</span>
-                    <span style="font-size: 14px;">Acrylic Set 3</span>
-                </div>
-            </div>
-
-            <div class="gallery-item" data-category="art">
-                <div class="gallery-placeholder">
-                    <span>🎨</span>
-                    <span style="font-size: 14px;">Custom Art 3</span>
-                </div>
-            </div>
-
-            <div class="gallery-item" data-category="chrome">
-                <div class="gallery-placeholder">
-                    <span>⚡</span>
-                    <span style="font-size: 14px;">Chrome Nails 3</span>
-                </div>
-            </div>
         </div>
 
         <div class="cta-section">
@@ -296,23 +261,5 @@
         </div>
     </footer>
 
-    <script>
-        function filterGallery(category) {
-            // Update active button
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-
-            // Filter gallery items
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                if (category === 'all' || item.dataset.category === category) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-    </script>
 </body>
 </html>
