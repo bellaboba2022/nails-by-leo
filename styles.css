@@ -317,7 +317,7 @@ a:hover {
 .decorative-l {
   position: fixed;
   top: 60%;
-  left: 35%;
+  left: 42%;
   transform: translate(-50%, -50%);
   font-family: var(--font-script);
   font-size: 600px;
@@ -819,6 +819,7 @@ section.dark {
 
   .decorative-l {
     font-size: 320px;
+    left: 35%;
   }
 
   .gallery-page h1,
