@@ -74,7 +74,6 @@
                                 <span class="service-name">The Classic</span>
                                 <span class="service-meta">60 min · Mani, polish</span>
                             </div>
-                            <span class="service-price">$65</span>
                         </label>
 
                         <label class="service-option">
@@ -83,7 +82,6 @@
                                 <span class="service-name">The Signature</span>
                                 <span class="service-meta">90 min · Gel, shape, art</span>
                             </div>
-                            <span class="service-price">$95</span>
                         </label>
 
                         <label class="service-option">
@@ -92,7 +90,6 @@
                                 <span class="service-name">Chrome Set</span>
                                 <span class="service-meta">105 min · Mirror finish</span>
                             </div>
-                            <span class="service-price">$120</span>
                         </label>
 
                         <label class="service-option">
@@ -101,7 +98,6 @@
                                 <span class="service-name">Custom Artwork</span>
                                 <span class="service-meta">2+ hrs · Hand-painted</span>
                             </div>
-                            <span class="service-price">$160</span>
                         </label>
                     </div>
 
@@ -148,14 +144,10 @@
                             <span class="label">Date & Time</span>
                             <span class="value" id="summaryDateTime">-</span>
                         </div>
-                        <div class="summary-item">
-                            <span class="label">Price</span>
-                            <span class="value" id="summaryPrice">-</span>
-                        </div>
                     </div>
 
                     <button class="btn-reserve">RESERVE THIS SEAT →</button>
-                    <p class="deposit-note">$25 deposit applied to your service</p>
+                    <p class="deposit-note">Deposit applied to your service</p>
 
                     <div class="button-group">
                         <button class="btn-back" id="backStep3">← Back</button>
@@ -229,7 +221,6 @@
         function updateSummary() {
             document.getElementById('summaryService').textContent = selectedService.name;
             document.getElementById('summaryDateTime').textContent = `Thu, Apr 30 · ${selectedTime}`;
-            document.getElementById('summaryPrice').textContent = `$${selectedService.price}`;
         }
     </script>
 </body>
