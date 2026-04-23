@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nails by Leo - Your nails deserve a main character moment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-script">L</span>
+                <span class="logo-text">NAILS BY <span class="logo-accent">LEO</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <a href="#booking" class="nav-book">BOOK</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Left Section - Hero -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="eyebrow">BY APPOINTMENT · EST 2021</div>
+
+                <h1 class="hero-headline">
+                    Your nails deserve a
+                    <span class="script-accent">main character</span>
+                    moment.
+                </h1>
+
+                <p class="hero-description">
+                    Hand-painted nails in a private studio in Woodridge. One guest at a time. No rush, no small talk unless you start it. Booked below.
+                </p>
+
+                <div class="color-swatches">
+                    <div class="swatch" style="background: #C98A85;"></div>
+                    <div class="swatch" style="background: #E8C4BF;"></div>
+                    <div class="swatch" style="background: #D4A574;"></div>
+                    <div class="swatch" style="background: #8B7355;"></div>
+                    <div class="swatch" style="background: #6B5D52;"></div>
+                    <span class="swatch-label">Over 40 house shades →</span>
+                </div>
+            </div>
+
+            <!-- Decorative L -->
+            <div class="decorative-l">L</div>
+        </section>
+
+        <!-- Right Section - Booking Panel -->
+        <section class="booking-section" id="booking">
+            <div class="booking-panel">
+                <!-- Header -->
+                <div class="booking-header">
+                    <h2>BOOK AN APPOINTMENT</h2>
+                    <span class="step-indicator" id="stepIndicator">Step 1 of 3</span>
+                </div>
+
+                <!-- Step 1: Service Selection -->
+                <div class="booking-step" id="step1" data-step="1">
+                    <h3>Choose your service</h3>
+
+                    <div class="service-list">
+                        <label class="service-option">
+                            <input type="radio" name="service" value="classic" data-price="65" data-duration="60">
+                            <div class="service-details">
+                                <span class="service-name">The Classic</span>
+                                <span class="service-meta">60 min · Mani, polish</span>
+                            </div>
+                            <span class="service-price">$65</span>
+                        </label>
+
+                        <label class="service-option">
+                            <input type="radio" name="service" value="signature" data-price="95" data-duration="90">
+                            <div class="service-details">
+                                <span class="service-name">The Signature</span>
+                                <span class="service-meta">90 min · Gel, shape, art</span>
+                            </div>
+                            <span class="service-price">$95</span>
+                        </label>
+
+                        <label class="service-option">
+                            <input type="radio" name="service" value="chrome" data-price="120" data-duration="105">
+                            <div class="service-details">
+                                <span class="service-name">Chrome Set</span>
+                                <span class="service-meta">105 min · Mirror finish</span>
+                            </div>
+                            <span class="service-price">$120</span>
+                        </label>
+
+                        <label class="service-option">
+                            <input type="radio" name="service" value="custom" data-price="160" data-duration="120">
+                            <div class="service-details">
+                                <span class="service-name">Custom Artwork</span>
+                                <span class="service-meta">2+ hrs · Hand-painted</span>
+                            </div>
+                            <span class="service-price">$160</span>
+                        </label>
+                    </div>
+
+                    <button class="btn-next" id="nextStep1" disabled>Continue →</button>
+                </div>
+
+                <!-- Step 2: Date & Time Selection -->
+                <div class="booking-step hidden" id="step2" data-step="2">
+                    <h3>Select your time</h3>
+
+                    <div class="next-opening">
+                        <span class="label">NEXT OPENING</span>
+                        <div class="opening-date">
+                            <span id="openingDate">Thu, Apr 30 · 1:00pm</span>
+                            <span class="badge-available">AVAILABLE</span>
+                        </div>
+                    </div>
+
+                    <div class="time-slots">
+                        <button class="time-slot" data-time="10:00">10:00</button>
+                        <button class="time-slot" data-time="11:30">11:30</button>
+                        <button class="time-slot active" data-time="13:00">1:00</button>
+                        <button class="time-slot" data-time="14:30">2:30</button>
+                        <button class="time-slot" data-time="16:00">4:00</button>
+                        <button class="time-slot" data-time="17:30">5:30</button>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn-back" id="backStep2">← Back</button>
+                        <button class="btn-next" id="nextStep2">Continue →</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Confirmation -->
+                <div class="booking-step hidden" id="step3" data-step="3">
+                    <h3>Confirm your booking</h3>
+
+                    <div class="booking-summary">
+                        <div class="summary-item">
+                            <span class="label">Service</span>
+                            <span class="value" id="summaryService">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Date & Time</span>
+                            <span class="value" id="summaryDateTime">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Price</span>
+                            <span class="value" id="summaryPrice">-</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-reserve">RESERVE THIS SEAT →</button>
+                    <p class="deposit-note">$25 deposit applied to your service</p>
+
+                    <div class="button-group">
+                        <button class="btn-back" id="backStep3">← Back</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Booking System
+        let currentStep = 1;
+        let selectedService = null;
+        let selectedTime = null;
+
+        // Step 1: Service Selection
+        document.querySelectorAll('input[name="service"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                selectedService = {
+                    value: e.target.value,
+                    price: e.target.dataset.price,
+                    duration: e.target.dataset.duration,
+                    name: e.target.closest('.service-option').querySelector('.service-name').textContent
+                };
+                document.getElementById('nextStep1').disabled = false;
+            });
+        });
+
+        document.getElementById('nextStep1').addEventListener('click', () => {
+            goToStep(2);
+        });
+
+        // Step 2: Time Selection
+        document.querySelectorAll('.time-slot').forEach(slot => {
+            slot.addEventListener('click', (e) => {
+                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('active'));
+                e.target.classList.add('active');
+                selectedTime = e.target.dataset.time;
+            });
+        });
+
+        document.getElementById('nextStep2').addEventListener('click', () => {
+            if (selectedTime) {
+                updateSummary();
+                goToStep(3);
+            }
+        });
+
+        document.getElementById('backStep2').addEventListener('click', () => {
+            goToStep(1);
+        });
+
+        document.getElementById('backStep3').addEventListener('click', () => {
+            goToStep(2);
+        });
+
+        // Step 3: Confirmation
+        document.querySelector('.btn-reserve').addEventListener('click', () => {
+            alert('Thank you for booking with Nails by Leo! We look forward to seeing you.');
+        });
+
+        // Navigation Functions
+        function goToStep(step) {
+            document.querySelectorAll('.booking-step').forEach(s => s.classList.add('hidden'));
+            document.getElementById(`step${step}`).classList.remove('hidden');
+            document.getElementById('stepIndicator').textContent = `Step ${step} of 3`;
+            currentStep = step;
+            window.scrollTo(0, document.querySelector('.booking-panel').offsetTop - 100);
+        }
+
+        function updateSummary() {
+            document.getElementById('summaryService').textContent = selectedService.name;
+            document.getElementById('summaryDateTime').textContent = `Thu, Apr 30 · ${selectedTime}`;
+            document.getElementById('summaryPrice').textContent = `$${selectedService.price}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Nails by Leo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-8) var(--space-5);
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: var(--space-9);
+        }
+
+        .gallery-header h1 {
+            font-size: var(--fs-h1);
+            margin-bottom: var(--space-4);
+        }
+
+        .gallery-header p {
+            font-size: var(--fs-lead);
+            color: var(--fg-2);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-6);
+            margin-bottom: var(--space-9);
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--cream-200);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: var(--space-4);
+            background: linear-gradient(135deg, var(--cream-200), var(--gold-100));
+            color: var(--fg-3);
+            font-size: 48px;
+        }
+
+        .gallery-placeholder span {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .filter-section {
+            text-align: center;
+            margin-bottom: var(--space-7);
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-4);
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: var(--space-3) var(--space-5);
+            border: 1px solid var(--border-2);
+            background: var(--white);
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: var(--fs-small);
+            letter-spacing: 0.05em;
+            transition: all 0.2s ease;
+            color: var(--fg-2);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--accent);
+            color: var(--white);
+            border-color: var(--accent);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: var(--space-7);
+            background: var(--cream-100);
+            border-radius: var(--radius-lg);
+        }
+
+        .cta-section h2 {
+            color: var(--fg-1);
+            margin-bottom: var(--space-4);
+            font-size: var(--fs-h2);
+        }
+
+        .cta-section p {
+            color: var(--fg-2);
+            margin-bottom: var(--space-6);
+            font-size: var(--fs-lead);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: var(--space-4) var(--space-6);
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: var(--fs-small);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-hover);
+            box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .filter-buttons {
+                gap: var(--space-2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-script">L</span>
+                <span class="logo-text">NAILS BY <span class="logo-accent">LEO</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="gallery.html" style="color: var(--accent);">GALLERY</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <a href="index.html#booking" class="nav-book">BOOK</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="gallery-page">
+        <div class="gallery-header">
+            <h1>Gallery</h1>
+            <p>Explore our latest nail designs and creative work. Each design tells a story of artistry, passion, and personalization.</p>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterGallery('all')">All</button>
+                <button class="filter-btn" onclick="filterGallery('gel')">Gel</button>
+                <button class="filter-btn" onclick="filterGallery('acrylic')">Acrylic</button>
+                <button class="filter-btn" onclick="filterGallery('art')">Custom Art</button>
+                <button class="filter-btn" onclick="filterGallery('chrome')">Chrome</button>
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Gallery items - Placeholder for user to add images -->
+            <div class="gallery-item" data-category="gel">
+                <div class="gallery-placeholder">
+                    <span>✨</span>
+                    <span style="font-size: 14px;">Gel Design 1</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="acrylic">
+                <div class="gallery-placeholder">
+                    <span>💅</span>
+                    <span style="font-size: 14px;">Acrylic Set 1</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="art">
+                <div class="gallery-placeholder">
+                    <span>🎨</span>
+                    <span style="font-size: 14px;">Custom Art 1</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="chrome">
+                <div class="gallery-placeholder">
+                    <span>⚡</span>
+                    <span style="font-size: 14px;">Chrome Nails 1</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="gel">
+                <div class="gallery-placeholder">
+                    <span>✨</span>
+                    <span style="font-size: 14px;">Gel Design 2</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="acrylic">
+                <div class="gallery-placeholder">
+                    <span>💅</span>
+                    <span style="font-size: 14px;">Acrylic Set 2</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="art">
+                <div class="gallery-placeholder">
+                    <span>🎨</span>
+                    <span style="font-size: 14px;">Custom Art 2</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="chrome">
+                <div class="gallery-placeholder">
+                    <span>⚡</span>
+                    <span style="font-size: 14px;">Chrome Nails 2</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="gel">
+                <div class="gallery-placeholder">
+                    <span>✨</span>
+                    <span style="font-size: 14px;">Gel Design 3</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="acrylic">
+                <div class="gallery-placeholder">
+                    <span>💅</span>
+                    <span style="font-size: 14px;">Acrylic Set 3</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="art">
+                <div class="gallery-placeholder">
+                    <span>🎨</span>
+                    <span style="font-size: 14px;">Custom Art 3</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="chrome">
+                <div class="gallery-placeholder">
+                    <span>⚡</span>
+                    <span style="font-size: 14px;">Chrome Nails 3</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Love What You See?</h2>
+            <p>
+                Book your appointment to create your own custom nail design. Whether you want to recreate one of these looks or bring your own unique vision to life, we're here to make it happen.
+            </p>
+            <a href="index.html#booking" class="cta-button">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Nails by Leo. All rights reserved.</p>
+            <p>Woodridge, Illinois</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterGallery(category) {
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Filter gallery items
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

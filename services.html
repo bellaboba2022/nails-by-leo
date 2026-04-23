@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Nails by Leo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .services-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-8) var(--space-5);
+        }
+
+        .services-page h1 {
+            font-size: var(--fs-h1);
+            margin-bottom: var(--space-7);
+            text-align: center;
+        }
+
+        .services-container {
+            display: grid;
+            gap: var(--space-7);
+            margin-bottom: var(--space-9);
+        }
+
+        .service-category {
+            border-top: 1px solid var(--border-2);
+            padding-top: var(--space-7);
+        }
+
+        .service-category h2 {
+            color: var(--accent);
+            margin-bottom: var(--space-6);
+            font-size: var(--fs-h2);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+        }
+
+        .service-item {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-1);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .service-item h3 {
+            color: var(--fg-1);
+            margin-bottom: var(--space-2);
+            font-size: var(--fs-lead);
+        }
+
+        .service-meta {
+            font-size: var(--fs-caption);
+            color: var(--fg-3);
+            margin-bottom: var(--space-4);
+        }
+
+        .service-price {
+            font-size: var(--fs-h3);
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: var(--space-4);
+        }
+
+        .service-item p {
+            font-size: var(--fs-body);
+            color: var(--fg-2);
+            margin-bottom: var(--space-5);
+            line-height: 1.6;
+        }
+
+        .service-item a {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: var(--space-3) var(--space-5);
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: var(--fs-small);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .service-item a:hover {
+            background: var(--accent-hover);
+            box-shadow: var(--shadow-md);
+        }
+
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto var(--space-8);
+            text-align: center;
+            font-size: var(--fs-lead);
+            color: var(--fg-2);
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-script">L</span>
+                <span class="logo-text">NAILS BY <span class="logo-accent">LEO</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="services.html" style="color: var(--accent);">SERVICES</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <a href="index.html#booking" class="nav-book">BOOK</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="services-page">
+        <h1>Our Services</h1>
+
+        <p class="intro-text">
+            Every service is thoughtfully crafted to bring out your best self. From classic manicures to custom artwork, each appointment is a personalized experience designed just for you.
+        </p>
+
+        <div class="services-container">
+            <!-- Natural Nails -->
+            <div class="service-category">
+                <h2>Natural Nails</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>Spa Manicure</h3>
+                        <div class="service-meta">60 min</div>
+                        <div class="service-price">$65</div>
+                        <p>Classic manicure with polish, cuticle care, and hand massage</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Spa Pedicure</h3>
+                        <div class="service-meta">60 min</div>
+                        <div class="service-price">$65</div>
+                        <p>Relaxing pedicure with foot soak, exfoliation, and polish</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Nails Trim (hands)</h3>
+                        <div class="service-meta">30 min</div>
+                        <div class="service-price">$35</div>
+                        <p>Professional nail shaping and cuticle care for hands</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Nails Trim (feet)</h3>
+                        <div class="service-meta">30 min</div>
+                        <div class="service-price">$35</div>
+                        <p>Professional toenail shaping and care</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Polish Change (hands)</h3>
+                        <div class="service-meta">15 min</div>
+                        <div class="service-price">$20</div>
+                        <p>Quick polish refresh for your natural nails</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Polish Change (feet)</h3>
+                        <div class="service-meta">15 min</div>
+                        <div class="service-price">$20</div>
+                        <p>Quick pedicure polish refresh</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nails Enhancement -->
+            <div class="service-category">
+                <h2>Nails Enhancement</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>Acrylic Fill + Gel Polish</h3>
+                        <div class="service-meta">75 min</div>
+                        <div class="service-price">$75</div>
+                        <p>Fill your acrylic nails with gel polish application</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Acrylic Full Set + Gel Polish</h3>
+                        <div class="service-meta">90 min</div>
+                        <div class="service-price">$95</div>
+                        <p>Complete acrylic nail set with gel polish finish</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Dipping Powder (colors)</h3>
+                        <div class="service-meta">60 min</div>
+                        <div class="service-price">$70</div>
+                        <p>Durable dipping powder with color selection</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Dipping Powder + French Tips</h3>
+                        <div class="service-meta">75 min</div>
+                        <div class="service-price">$85</div>
+                        <p>Dipping powder with elegant French tip design</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Gel Polish Manicure</h3>
+                        <div class="service-meta">60 min</div>
+                        <div class="service-price">$60</div>
+                        <p>Long-lasting gel polish on natural nails</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Gel X Fill + Gel Polish</h3>
+                        <div class="service-meta">75 min</div>
+                        <div class="service-price">$80</div>
+                        <p>Fill your Gel X extensions with fresh gel polish</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Gel X Fullset + Gel Polish</h3>
+                        <div class="service-meta">90 min</div>
+                        <div class="service-price">$100</div>
+                        <p>Complete Gel X extension set with polish design</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nail Design Selection -->
+            <div class="service-category">
+                <h2>Nail Design Selection</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>Chrome Nails</h3>
+                        <div class="service-meta">Add-on Service</div>
+                        <div class="service-price">+$30</div>
+                        <p>Mirror-finish chrome effect for stunning shine</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Free Style Nail Art</h3>
+                        <div class="service-meta">Hand-painted</div>
+                        <div class="service-price">+$40</div>
+                        <p>Custom hand-painted designs unique to you</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>French Nails</h3>
+                        <div class="service-meta">Classic Design</div>
+                        <div class="service-price">+$15</div>
+                        <p>Timeless French tip design for any occasion</p>
+                        <a href="index.html#booking">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Nails by Leo. All rights reserved.</p>
+            <p>Woodridge, Illinois</p>
+        </div>
+    </footer>
+</body>
+</html>
